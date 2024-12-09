@@ -9,35 +9,76 @@
 //   </StrictMode>,
 // )
 
-import React from "react";
-import ReactDOM from "react-dom/client";
-import {
-    createBrowserRouter,
-    createRoutesFromElements,
-    Route,
-    RouterProvider,
-} from "react-router-dom";
-import App from "./App.tsx";
-import "./index.css";
 
-import Landing from "./pages/Landing.tsx";
+////////////////////
 
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route element={<App />}>
-            <Route path='/' element={<Landing />} />
-            <Route path='/create' element={<CreateMeet />} />
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import {
+//     createBrowserRouter,
+//     createRoutesFromElements,
+//     Route,
+//     RouterProvider,
+// } from "react-router-dom";
+// import App from "./App.tsx";
+// import "./index.css";
 
-        </Route>,
-    ),
-);
+// import Landing from "./pages/Landing.tsx";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
 
-                <RouterProvider router={router} />
+// const router = createBrowserRouter(
+//     createRoutesFromElements(
+//         <Route element={<App />}>
+//             <Route path='/' element={<Landing />} />
+//             {/* <Route path='/create' element={<CreateMeet />} /> */}
+
+//         </Route>,
+//     ),
+// );
+
+// ReactDOM.createRoot(document.getElementById("root")!).render(
+//     <React.StrictMode>
+
+//                 <RouterProvider router={router} />
                 
 
-    </React.StrictMode>,
+//     </React.StrictMode>,
+// );
+
+
+// main.tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import Landing from "./pages/Landing";
+import "./index.css";
+
+// Define your routes using the new Router API (React Router v6)
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App />, // The main layout component
+        children: [
+            {
+                index: true, // This will be the default route for "/"
+                element: <Landing />,
+            },
+            // Add other routes here if needed
+            // {
+            //     path: "/create",
+            //     element: <CreateMeet />,
+            // },
+        ],
+    },
+]);
+
+// Render the application with the RouterProvider
+ReactDOM.createRoot(document.getElementById("root")!).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
+
+
 );
