@@ -31,8 +31,7 @@ const Landing = () => {
             <br></br>
             <div className='flex justify-center gap-20 text-2xl font'>
                 <Link className='rounded bg-slate-300 px-4 py-2' to='/find'>
-                    
-                    {import.meta.env.VITE_SERVICE_KEY}
+                    Find meet
                 </Link>
                 <Link to='/create' className='rounded bg-slate-300 px-4 py-2'>
                     Create meet
