@@ -54,6 +54,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Landing from "./pages/Landing";
 import "./index.css";
+import { Auth } from "./pages/Auth";
 
 // Define your routes using the new Router API (React Router v6)
 const router = createBrowserRouter([
@@ -65,11 +66,10 @@ const router = createBrowserRouter([
                 index: true, // This will be the default route for "/"
                 element: <Landing />,
             },
-            // Add other routes here if needed
-            // {
-            //     path: "/create",
-            //     element: <CreateMeet />,
-            // },
+            {
+                path: "/create",
+                element: <Auth />,
+            },
         ],
     },
 ]);
