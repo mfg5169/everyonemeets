@@ -1,17 +1,19 @@
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-
+import { useNavigate } from 'react-router-dom';
 export const Auth = () => {
     // Your Google OAuth 2.0 Client ID
     const clientId = import.meta.env.VITE_CLIENT_ID;
-  
+    const navigate = useNavigate();
+
     const handleLoginSuccess = (response: any) => {
-        //window.location.href = '/create';
+
+      navigate('/');
       console.log("Login Success:", response);
-      window.location.href = '/create';
     };
   
     const handleLoginError = () => {
       console.log("Login Failed");
+      navigate('/')
     };
   
     return (
