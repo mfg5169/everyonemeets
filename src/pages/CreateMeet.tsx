@@ -21,9 +21,9 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
 } from "../components/ui/alert-dialog";
-import { createClient } from "@supabase/supabase-js";
+//import { createClient } from "@supabase/supabase-js";
 
-import { DatePicker } from "../components/ui/day-picker";
+
 
 const CreateMeet = () => {
     // state for event name, start time, end time, and description
