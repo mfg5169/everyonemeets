@@ -67,7 +67,7 @@ const router = createBrowserRouter([
                 element: <Landing />,
             },
             {
-                path: "/create",
+                path: "/newmeet",
                 element: <Auth />,
             },
         ],

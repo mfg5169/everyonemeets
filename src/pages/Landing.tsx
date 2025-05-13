@@ -33,7 +33,7 @@ const Landing = () => {
                 <Link className='rounded bg-slate-300 px-4 py-2' to='/find'>
                     Find meet
                 </Link>
-                <Link to='/create' className='rounded bg-slate-300 px-4 py-2'>
+                <Link to='/newmeet' className='rounded bg-slate-300 px-4 py-2'>
                     Create meet
                 </Link>
             </div>
